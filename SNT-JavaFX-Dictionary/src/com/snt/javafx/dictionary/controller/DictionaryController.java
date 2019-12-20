@@ -64,12 +64,18 @@ public class DictionaryController implements Initializable {
     	if(tx_input.getText()!=null)
     	{   listview.getItems().clear();
     		for(int i=0;i<manager.Size();i++) {
-     		if(manager.getData().isContainKeyword(i, tx_input.getText())) 
-     		{
-     			System.out.println(tx_input.getText());
+    			if(manager.getData().isEqualKeyword(i, tx_input.getText())) 
+    			{
+    				listview.getItems().add(manager.getData().getKeyword(i));
+    				
+    			}
+    			
+    			else if(manager.getData().isContainKeyword(i, tx_input.getText())) 
+     		   {
+     			  System.out.println(tx_input.getText());
      			
      			
-     		listview.getItems().add(manager.getData().getKeyword(i));
+     		    listview.getItems().add(manager.getData().getKeyword(i));
      		
      		}
      		

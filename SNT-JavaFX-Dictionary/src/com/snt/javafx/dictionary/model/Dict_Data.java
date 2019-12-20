@@ -20,6 +20,9 @@ public Dict get(int index) {
 		return lstdata.get(index);
 		
 	}
+public boolean isEqualKeyword(int index,String string) {
+	return lstdata.get(index).equalKeyWord(string);
+}
 public boolean isContainKeyword(int index,String string) {
 	return lstdata.get(index).isContainKeyword(string);
 }
